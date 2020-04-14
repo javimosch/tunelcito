@@ -1,0 +1,28 @@
+version: "3.1"
+
+services:
+  tunelcito:
+    restart: always
+    image: node:13.5.0-alpine
+    container_name: tunelcito-server
+    env_file: ../.env
+    environment:
+      - NODE_ENV=production
+    entrypoint:
+      - sh
+      - entry.sh
+    working_dir: /app
+    volumes:
+      - ../data:/app/data
+      - ../src:/app/src
+      - ../.env:/app/.env
+      - ./server-entry.sh:/app/entry.sh
+      - ../package.json:/app/package.json
+      - ../package-lock.json:/app/package-lock.json
+      - ${TUNELCITO_DOCKER_NPM_CACHE_FOLDER:-/root/.npm/_cacache}:/root/.npm/_cacache
+    networks:
+          - caddy
+networks:
+  caddy:
+    external:
+      name: caddy-node_caddy

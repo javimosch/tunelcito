@@ -1,0 +1,35 @@
+{
+    "name": "tunelcito",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev:server": "npx nodemon --exec 'node src/server.js' --watch src/server.js --watch src/server -e js",
+        "dev:client": "npx nodemon --exec 'node src/client.js' --watch src/client.js -e js",
+        "start:server": "node src/server.js",
+        "start:client": "node src/client.js",
+        "up:server": "docker-compose -f docker/server.yml up -d",
+        "down:server": "docker-compose -f docker/server.yml down",
+        "up:client": "docker-compose -f docker/client.yml up -d",
+        "down:client": "docker-compose -f docker/client.yml down"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.19.2",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "funql-api": "^1.2.9",
+        "lowdb": "^1.0.0",
+        "mime-types": "^2.1.26",
+        "moment": "^2.24.0",
+        "moment-timezone": "^0.5.28",
+        "nodemon": "^2.0.3",
+        "sander": "^0.6.0",
+        "shortid": "^2.2.15",
+        "socket.io": "^2.3.0",
+        "socket.io-client": "^2.3.0",
+        "uniqid": "^5.2.0"
+    }
+}

@@ -1,0 +1,16 @@
+<template id="add_user">
+    <div>
+        <h1>Add User</h1>
+        <div>
+            <label>Nickname</label>
+            <input v-model="form.name"/>
+        </div>
+        <div>
+            <label>Email</label>
+            <input v-model="form.email"/>
+        </div>
+        <div>
+            <button @click="save">Save</button>
+        </div>
+    </div>
+</template>
