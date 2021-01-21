@@ -28,7 +28,7 @@
         "nodemon": "^2.0.3",
         "sander": "^0.6.0",
         "shortid": "^2.2.15",
-        "socket.io": "^2.3.0",
+        "socket.io": "^2.4.0",
         "socket.io-client": "^2.3.0",
         "uniqid": "^5.2.0"
     }
