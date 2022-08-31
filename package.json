@@ -24,7 +24,7 @@
         "lowdb": "^1.0.0",
         "mime-types": "^2.1.26",
         "moment": "^2.24.0",
-        "moment-timezone": "^0.5.28",
+        "moment-timezone": "^0.5.35",
         "nodemon": "^2.0.3",
         "sander": "^0.6.0",
         "shortid": "^2.2.15",
